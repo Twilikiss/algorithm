@@ -1,11 +1,143 @@
 package LeetCode;
 
+/**
+ * 代码在力扣上通过倒数第三个例子时报错
+ * 在输入：
+ * [2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,9]
+ * [5,6,4,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,9,9,9,9]
+ * 
+ *    输出：[7,0,8,4,8,6,4,2,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,1,4,3,9,1]
+预期结果：[7,0,8,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,4,8,6,1,4,3,9,1]
+ */
 import java.math.BigDecimal;
 
 
 public class 两数相加 {
 	public static void main(String[] args) {
-		ListNode h1 = new ListNode(9);
+		ListNode h1 = new ListNode(2);
+		ListNode h2 = new ListNode(4);
+		ListNode h3 = new ListNode(3);
+		ListNode h4 = new ListNode(2);
+		ListNode h5 = new ListNode(4);
+		ListNode h6 = new ListNode(3);
+		ListNode h7 = new ListNode(2);
+		ListNode h8 = new ListNode(4);
+		ListNode h9 = new ListNode(3);
+		ListNode h10 = new ListNode(2);
+		ListNode h11 = new ListNode(4);
+		ListNode h12 = new ListNode(3);
+		ListNode h13 = new ListNode(2);
+		ListNode h14 = new ListNode(4);
+		ListNode h15 = new ListNode(3);
+		ListNode h16 = new ListNode(2);
+		ListNode h17 = new ListNode(4);
+		ListNode h18 = new ListNode(3);
+		ListNode h19 = new ListNode(2);
+		ListNode h20 = new ListNode(4);
+		ListNode h21 = new ListNode(3);
+		ListNode h22 = new ListNode(2);
+		ListNode h23 = new ListNode(4);
+		ListNode h24 = new ListNode(3);
+		ListNode h25 = new ListNode(2);
+		ListNode h26 = new ListNode(4);
+		ListNode h27 = new ListNode(3);
+		ListNode h28 = new ListNode(2);
+		ListNode h29 = new ListNode(4);
+		ListNode h30 = new ListNode(3);
+		ListNode h31 = new ListNode(2);
+		ListNode h32 = new ListNode(4);
+		ListNode h33 = new ListNode(3);
+		ListNode h34 = new ListNode(2);
+		ListNode h35 = new ListNode(4);
+		ListNode h36 = new ListNode(3);
+		ListNode h37 = new ListNode(2);
+		ListNode h38 = new ListNode(4);
+		ListNode h39 = new ListNode(3);
+		ListNode h40 = new ListNode(2);
+		ListNode h41 = new ListNode(4);
+		ListNode h42 = new ListNode(3);
+		ListNode h43 = new ListNode(2);
+		ListNode h44 = new ListNode(4);
+		ListNode h45 = new ListNode(3);
+		ListNode h46 = new ListNode(2);
+		ListNode h47 = new ListNode(4);
+		ListNode h48 = new ListNode(3);
+		ListNode h49 = new ListNode(2);
+		ListNode h50 = new ListNode(4);
+		ListNode h51 = new ListNode(3);
+		ListNode h52 = new ListNode(2);
+		ListNode h53 = new ListNode(4);
+		ListNode h54 = new ListNode(3);
+		ListNode h55 = new ListNode(2);
+		ListNode h56 = new ListNode(4);
+		ListNode h57 = new ListNode(3);
+		ListNode h58 = new ListNode(2);
+		ListNode h59 = new ListNode(4);
+		ListNode h60 = new ListNode(3);
+		ListNode h61 = new ListNode(9);
+		
+		
+		
+		    h1.next = h2;
+	        h2.next = h3;
+	        h3.next = h4;
+	        h4.next = h5;
+	        h5.next = h6;
+	        h6.next = h7;
+	        h7.next = h8;
+	        h8.next = h9;
+	        h9.next = h10;
+	        h10.next = h11;
+	        h11.next = h12;
+	        h12.next = h13;
+	        h13.next = h14;
+	        h14.next = h15;
+	        h15.next = h16;
+	        h16.next = h17;
+	        h17.next = h18;
+	        h18.next = h19;
+	        h19.next = h20;
+	        h20.next = h21;
+	        h21.next = h22;
+	        h22.next = h23;
+	        h23.next = h24;
+	        h24.next = h25;
+	        h25.next = h26;
+	        h26.next = h27;
+	        h27.next = h28;
+	        h28.next = h29;
+	        h29.next = h30;
+	        h30.next = h31;
+	        h31.next = h32;
+	        h32.next = h33;
+	        h33.next = h34;
+	        h34.next = h35;
+	        h35.next = h36;
+	        h36.next = h37;
+	        h37.next = h38;
+	        h38.next = h39;
+	        h39.next = h40;
+	        h40.next = h41;
+	        h41.next = h42;
+	        h42.next = h43;
+	        h43.next = h44;
+	        h44.next = h45;
+	        h45.next = h46;
+	        h46.next = h47;
+	        h47.next = h48;
+	        h48.next = h49;
+	        h49.next = h50;
+	        h50.next = h51;
+	        h51.next = h52;
+	        h52.next = h53;
+	        h53.next = h54;
+	        h54.next = h55;
+	        h55.next = h56;
+	        h56.next = h57;
+	        h57.next = h58;
+	        h58.next = h59;
+	        h59.next = h60;
+	        h61.next = null;
 	
 		
 		h1.next = null;
