@@ -9,7 +9,7 @@ import java.util.Stack;
  * @author mlp52
  *
  */
-public class SingleLinkedListPlus {
+public class SingleLinkedListPlu {
 	public static void main(String[] args) {
 		HeroNode heroNode1 = new HeroNode(1, "陈晓彬", "小兵");
 		HeroNode heroNode2 = new HeroNode(2, "张春洋", "sb");
