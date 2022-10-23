@@ -6,8 +6,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-import 数据结构与算法练习.queue.ArraysQueue;
-
 /**
  * 给定一个平衡括号字符串 S，按下述规则计算该字符串的分数：
 	() 得 1 分。

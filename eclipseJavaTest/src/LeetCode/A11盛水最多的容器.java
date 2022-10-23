@@ -24,7 +24,7 @@ public class A11盛水最多的容器 {
     public static void main(String[] args) {
         System.out.println(maxArea01(new int[]{1,1}));
     }
-    //代码超时！！！
+    //O(n2)数据量过大， 代码超时！！！
     public static int maxArea01(int[] height) {
         int length = height.length;
         int maxWater = 0;

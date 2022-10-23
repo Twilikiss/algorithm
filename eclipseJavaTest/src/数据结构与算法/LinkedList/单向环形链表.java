@@ -1,6 +1,4 @@
-package 数据结构与算法练习.LinkedList;
-
-import LeetCode.TreeNode;
+package 数据结构与算法.LinkedList;
 
 /**
  * 此处将探讨单向环形链表的典例——约瑟夫问题

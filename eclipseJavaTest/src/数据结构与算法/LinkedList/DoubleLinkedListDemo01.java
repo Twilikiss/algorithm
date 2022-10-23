@@ -1,4 +1,4 @@
-package 数据结构与算法练习.LinkedList;
+package 数据结构与算法.LinkedList;
 /**
  * 双向链表的代码实现
  * @author mlp520
