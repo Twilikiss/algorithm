@@ -9,7 +9,7 @@ import java.util.Stack;
  * @author mlp52
  *
  */
-public class SingleLinkedListPlu {
+public class SingleLinkedListPlus {
 	public static void main(String[] args) {
 		HeroNode heroNode1 = new HeroNode(1, "陈晓彬", "小兵");
 		HeroNode heroNode2 = new HeroNode(2, "张春洋", "sb");
@@ -380,57 +380,58 @@ class SingleLinkedPlus {
  * @author mlp52
  *
  */
-class HeroNode {
-	private int no;
-	private String name;
-	private String nickName;
-	private HeroNode next;// 指向下一个节点
-
-	public HeroNode() {
-
-	}
-
-	public HeroNode(int heroNo, String name, String nickName) {
-		this.no = heroNo;
-		this.name = name;
-		this.nickName = nickName;
-	}
-	// 重写显示方法，重写一下toString方法
-
-	public int getNo() {
-		return no;
-	}
-
-	public void setNo(int no) {
-		this.no = no;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getNickName() {
-		return nickName;
-	}
-
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-
-	public HeroNode getNext() {
-		return next;
-	}
-
-	public void setNext(HeroNode next) {
-		this.next = next;
-	}
-
-	@Override
-	public String toString() {
-		return "HeroNode [no=" + no + ", " + "name=" + name + ", " + "nickName=" + nickName + "]";
-	}
-}
+//该代码在其他地方有重复，先注掉了
+//class HeroNode {
+//	private int no;
+//	private String name;
+//	private String nickName;
+//	private HeroNode next;// 指向下一个节点
+//
+//	public HeroNode() {
+//
+//	}
+//
+//	public HeroNode(int heroNo, String name, String nickName) {
+//		this.no = heroNo;
+//		this.name = name;
+//		this.nickName = nickName;
+//	}
+//	// 重写显示方法，重写一下toString方法
+//
+//	public int getNo() {
+//		return no;
+//	}
+//
+//	public void setNo(int no) {
+//		this.no = no;
+//	}
+//
+//	public String getName() {
+//		return name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//
+//	public String getNickName() {
+//		return nickName;
+//	}
+//
+//	public void setNickName(String nickName) {
+//		this.nickName = nickName;
+//	}
+//
+//	public HeroNode getNext() {
+//		return next;
+//	}
+//
+//	public void setNext(HeroNode next) {
+//		this.next = next;
+//	}
+//
+//	@Override
+//	public String toString() {
+//		return "HeroNode [no=" + no + ", " + "name=" + name + ", " + "nickName=" + nickName + "]";
+//	}
+//}

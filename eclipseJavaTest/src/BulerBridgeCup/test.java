@@ -1,6 +1,8 @@
 package BulerBridgeCup;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
   * 用于测试各类方法的使用情况的返回值
@@ -9,17 +11,8 @@ import java.util.Scanner;
  */
 public class test {
 public static void main(String[] args) {
-	Scanner scanner = new Scanner(System.in);
-	
-	String inString = scanner.nextLine();
-	
-	String[] numberStrings = inString.split(" ");
-	
-	int total = Integer.valueOf(numberStrings[0]) + Integer.valueOf(numberStrings[1]);
-	
-	System.out.println(total);
-	
-		
-	
+	String s = "123456";
+	char i = s.charAt(0);
+	System.out.println(i);
 }
 }
