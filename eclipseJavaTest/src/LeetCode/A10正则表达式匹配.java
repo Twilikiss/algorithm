@@ -1,4 +1,7 @@
 package LeetCode;
+
+import java.util.ArrayList;
+
 /**
  * 给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
 
@@ -32,9 +35,20 @@ p 只包含从 a-z 的小写字母，以及字符 . 和 *。
  */
 public class A10正则表达式匹配 {
 	public static void main(String[] args) {
-		
+		isMatch(null,"a*ad*");
 	}
-	public boolean isMatch(String s, String p) {
-        return true;
+	public static boolean isMatch(String s, String p) {
+//		ArrayList<String> args = new ArrayList<>();
+//		String temp = "";
+//        for(int i = 0;i < p.length();i++){
+//			char index = p.charAt(i);
+//			if (index == '*'){
+//				args.add(temp);
+//				temp = "";
+//				continue;
+//			}
+//			temp += index;
+//		}
+		return true;
 	}
 }
