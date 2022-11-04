@@ -28,7 +28,6 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 输入：nums = [0,0,0]
 输出：[[0,0,0]]
 解释：唯一可能的三元组和为 0 。
- 
 
 提示：
 3 <= nums.length <= 3000
@@ -40,62 +39,89 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 public class A15三数之和 {
 	public static void main(String[] args) {
 		int[] nums = {-1,0,1,2,-1,-4};
-		List<List<Integer>> list = threeSum(nums);
+		List<List<Integer>> list = threeSum01(nums);
 		for(List<Integer> out : list) {
 			System.out.println(out);
 		}
 	}
 	/**
-	 * 代码失败，无法做到去重或去重方式冗余，继续进行改进
+	 * 代码太过复杂或者出现重复现象
 	 * @param nums
 	 * @return
 	 */
 	public static List<List<Integer>> threeSum(int[] nums) {
-        Arrays.sort(nums);
-        List<List<Integer>> answerArrayList = new ArrayList<>();
-        //排除特殊情况
-        if (nums.length < 3) {
-			return answerArrayList;
+		Arrays.sort(nums);
+		int length = nums.length;
+		List<List<Integer>> ans = new ArrayList<>();
+		HashSet<Integer> total = new HashSet<>();
+		if (nums.length == 3){
+			if (nums[0] + nums[1] + nums[2] != 0) return ans;
 		}
-        if (nums[0] > 0 || nums[nums.length - 1] < 0) {
-			return answerArrayList;
-		}
-        if (nums[0] == 0 && nums[nums.length - 1] == 0) {
-        	 List<List<Integer>> temp = new ArrayList<>();
-        	 List<Integer> integers = new ArrayList<>();
-        	 integers.add(0);
-        	 integers.add(0);
-        	 integers.add(0);
-        	 for (int i = 0; i < nums.length / 3; i++) {
-				temp.add(integers);
-			}
-        	 return temp;
-		}
-        if (nums[0] * nums[nums.length - 1] >= 0) {
-			return answerArrayList;
-		}
-        int SqitIndex = 0;
-        while(true) {
-        	if (nums[SqitIndex] == 0 || (nums[SqitIndex] * nums[SqitIndex + 1] < 0)) {
+		int indexSpit = 0;
+		while (true){
+			if (nums[indexSpit] >= 0){
 				break;
 			}
-        	SqitIndex++;
-        }
-        for(int i = 0;i <= SqitIndex;i++) {
-        	for(int j = nums.length - 1;j >= nums.length - 1 - SqitIndex;j--) {
-        		int findIndex = i + 1;
-        		while (findIndex < j) {
-					if (nums[i] + nums[j] + nums[findIndex] == 0) {
-						List<Integer> numsList = new ArrayList<>();
-						numsList.add(nums[i]);
-						numsList.add(nums[j]);
-						numsList.add(nums[findIndex]);
-						answerArrayList.add(numsList);
+			indexSpit++;
+		}
+		for (int i = 0;i < indexSpit;i++){
+			int a1 = nums[i];
+			for (int j = length - 1;j >= indexSpit;j--){
+				int a2 = nums[j];
+				nums[i] = 100001;
+				nums[j] = 100001;
+				if (!total.contains(- a1 - a2)){
+					if (Arrays.binarySearch(nums,- a1 - a2) >= 0){
+						List<Integer> temp = new ArrayList<>();
+						temp.add(a1);
+						temp.add(a2);
+						temp.add(- a1 - a2);
+						ans.add(temp);
+						total.add(- a1 - a2);
 					}
-					findIndex++;
 				}
-        	}
-        }
-        return answerArrayList;
+				nums[i] = a1;
+				nums[j] = a2;
+			}
+
+		}
+		return ans;
     }
+
+	/**
+	 * 巧妙利用第一项 < 第二项 < 第三项来做到去重的效果
+	 * @param nums
+	 * @return
+	 */
+	public static List<List<Integer>> threeSum01(int[] nums) {
+		int length = nums.length;
+		Arrays.sort(nums);
+		List<List<Integer>> ans = new ArrayList<>();
+		for (int first = 0;first < length;first++){
+			if (first > 0 && nums[first - 1] == nums[first]){
+				continue;
+			}
+			int third = length - 1;
+			int temp = nums[first];
+			for (int second = first + 1;second < length;second++){
+				if (second > first + 1 && nums[second - 1] == nums[second]){
+					continue;
+				}
+				while (second < third && nums[second] + nums[third] + temp > 0){
+					third--;
+				}
+				if (second == third){
+					break;
+				}
+				if (nums[second] + nums[third] + temp == 0){
+					List<Integer> list = new ArrayList<>();
+					list.add(nums[first]);
+					list.add(nums[second]);
+					list.add(nums[third]);
+					ans.add(list);
+				}
+			}
+		}
+		return ans;
+	}
 }
