@@ -12,25 +12,52 @@ import java.io.InputStreamReader;
 public class BinaryTree {
 	public static void main(String[] args) throws IOException {
 		BrinaryTree brinaryTree = new BrinaryTree();
-		HeroNode root = new HeroNode(1, "爱莉希雅");
-		HeroNode heroNode02 = new HeroNode(2, "凯文");
-		HeroNode heroNode03 = new HeroNode(3, "苏");
-		HeroNode heroNode04 = new HeroNode(4, "樱");
-		HeroNode heroNode05 = new HeroNode(5, "华");
-		HeroNode heroNode06 = new HeroNode(6, "梅比乌斯");
-		HeroNode heroNode07 = new HeroNode(7, "帕朵·菲莉斯");
-		
-		//先手动创建二叉树，后面将通过递归来创建二叉树
-		root.setLeft(heroNode02);
-		heroNode02.setLeft(heroNode03);
-		heroNode02.setRight(heroNode07);
-		root.setRight(heroNode04);
-		heroNode04.setRight(heroNode05);
-		heroNode04.setLeft(heroNode06);
-		
+//		HeroNode root = new HeroNode(1, "爱莉希雅");
+//		HeroNode heroNode02 = new HeroNode(2, "凯文");
+//		HeroNode heroNode03 = new HeroNode(3, "苏");
+//		HeroNode heroNode04 = new HeroNode(4, "樱");
+//		HeroNode heroNode05 = new HeroNode(5, "华");
+//		HeroNode heroNode06 = new HeroNode(6, "梅比乌斯");
+//		HeroNode heroNode07 = new HeroNode(7, "帕朵·菲莉斯");
+//
+//		//先手动创建二叉树，后面将通过递归来创建二叉树
+//		root.setLeft(heroNode02);
+//		heroNode02.setLeft(heroNode03);
+//		heroNode02.setRight(heroNode07);
+//		root.setRight(heroNode04);
+//		heroNode04.setRight(heroNode05);
+//		heroNode04.setLeft(heroNode06);
+
+		HeroNode A = new HeroNode(1,"A");
+		HeroNode B = new HeroNode(2,"B");
+		HeroNode C = new HeroNode(3,"C");
+		HeroNode D = new HeroNode(4,"D");
+		HeroNode E = new HeroNode(5,"E");
+		HeroNode F = new HeroNode(6,"F");
+		HeroNode G = new HeroNode(7,"G");
+		HeroNode H = new HeroNode(8,"H");
+		HeroNode I = new HeroNode(9,"I");
+		HeroNode J = new HeroNode(10,"J");
+		HeroNode K = new HeroNode(11,"K");
+		HeroNode L = new HeroNode(12,"L");
+		HeroNode M = new HeroNode(13,"M");
+
+		A.setLeft(B);
+		A.setRight(C);
+		B.setRight(D);
+		C.setRight(E);
+		D.setLeft(F);
+		D.setRight(G);
+		E.setLeft(H);
+		E.setRight(I);
+		F.setRight(J);
+		G.setRight(K);
+		I.setLeft(L);
+		I.setRight(M);
+
 		System.out.println("前序遍历");
-		brinaryTree.setRoot(root);
-		brinaryTree.preOrder();
+		brinaryTree.setRoot(A);
+		brinaryTree.infixcOrder();
 		
 //		System.out.println("中序遍历");
 //		brinaryTree.infixcOrder();
