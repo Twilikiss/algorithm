@@ -22,7 +22,7 @@ package LeetCode;
  */
 public class A11盛水最多的容器 {
     public static void main(String[] args) {
-        System.out.println(maxArea02(new int[]{1,8,6,2,5,4,8,3,7}));
+        System.out.println(maxArea(new int[]{1,8,6,2,5,4,8,3,7}));
     }
 
     //O(n2)在数据量过大时， 会出现代码超时！！！

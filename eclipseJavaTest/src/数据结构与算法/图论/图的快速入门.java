@@ -1,6 +1,7 @@
 package 数据结构与算法.图论;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * 关于的图的相关的知识点和快速入门
@@ -24,16 +25,18 @@ public class 图的快速入门 {
         graph.showGraph();
 
         //测试深度优先的代码
-        graph.DFS();
+        //graph.DFS();
 
-        System.out.println("wait!");
+        //System.out.println("wait!下面我们有请广度遍历");
+        
+        graph.BFS();
     }
 }
 
 class Graph {
     private ArrayList<String> vertexList; // 存储图中的节点
-    private int[][] edges; // 存储无向图的邻接矩阵
-    private int numOfEdges; // 图中边的个数
+    private int[][] edges; // 存储无向图对应的邻接矩阵
+    private int numOfEdges; // 图中边的条数
     private boolean[] visited; //记录某个结点有没有访问过
 
     public Graph(int n) {
@@ -79,7 +82,7 @@ class Graph {
         return vertexList.get(index);
     }
 
-    //返回两点的权值
+    //返回两点之间的权值
     public int getWeight(int v1, int v2) {
         return edges[v1][v2];
     }
@@ -164,5 +167,46 @@ class Graph {
         for (int i = 0; i < vertexList.size(); i++) {
             DFS(visited, i);
         }
+    }
+
+    public void BFS(boolean[] isVisited, int index) {
+        int u; // 表示队列头结点
+        int w; // 邻接结点
+        LinkedList<Integer> queue = new LinkedList<>();
+        // 访问该结点
+        if (index == vertexList.size() - 1) {
+        	System.out.print(getValueByIndex(index));
+		} else {
+			System.out.print(getValueByIndex(index) + "=>");
+		}
+        // 标记该节点
+        isVisited[index] = true;
+        // 将节点压入队列
+        queue.addLast(index);
+
+        while (!queue.isEmpty()) {
+            u = queue.removeFirst();
+            w = getFirstNeighbor(u);
+            while (w != -1) {// 如果找到了
+                if(!isVisited[w]){
+                	if (w == vertexList.size() - 1) {
+						System.out.print(getValueByIndex(w));
+					} else {
+						System.out.print(getValueByIndex(w) + "=>");
+					}
+                    
+                    isVisited[w] = true;
+                    queue.addLast(w);
+                }
+                w = getNextNeighbor(u,w);
+            }
+        }
+    }
+    public void BFS() {
+    	for (int i = 0; i < vertexList.size(); i++) {
+			if (!visited[i]) {
+				BFS(visited, i);
+			}
+		}
     }
 }

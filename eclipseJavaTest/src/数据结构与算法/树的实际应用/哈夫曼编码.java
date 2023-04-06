@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 哈夫曼树代码实现
+ * 哈夫曼编码的代码实现
  * @author mlp52
  *
  */
